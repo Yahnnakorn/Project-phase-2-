@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+.swiper {
+    width: 100%;
+    padding-bottom: 30px;
+    border-radius: 20px;
+}
+.swiper-slide {
+    width: 550px;
+    height: 350px;
+    border-radius: 20px;
+}
+.gameSlider {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.gameSlider::after {
+    position: absolute;
+    content:'';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+}
+.swiper-slide img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    height: 50px;
+    width: 50px; 
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 60%; 
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1.5rem;
+    color: aqua;
+}
+.gameSlider .content {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1000;
+    width: 60%;
+}
+.gameSlider .content h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.0rem;
+    color: aqua;
+    text-shadow: #ffffff;
+    line-height: 1.2;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+.gameSlider .content p {
+    color: #ffff;
+    font-size: 1rem;
+    text-shadow: black 0.1em 0.1em 0.2em;  
+}
+.gameSlider .content .buttons {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.gameSlider .content .buttons a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+.gameSlider .content .buttons .orderBtn {
+    line-height: 1.2;
+    padding: 8px 20px;
+    background: var(--second);
+    border-radius: 10px;
+}
+.gameSlider .content .buttons .playBtn {
+    height: 50px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+}
+.playBtn .play{
+    display: block;
+}
+.playBtn .pause{
+    display: none;
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .play {
+    display: none;
+}
+.swiper-slide.swiper-slide-active .playBtn.active .pause {
+    display: block;
+}
+
+.swiper-slide .video iframe {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 75%;
+    border-radius: 0 30px 0 30px;
+    background: var(--second);
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.5s;
+    transform-origin: middle;
+}
+.swiper-slide.swiper-slide-active .video.active iframe {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}

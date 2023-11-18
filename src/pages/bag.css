@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+.bag {
+    font-family: 'Kanit', sans-serif;
+    color: white !important;
+} 
+
+.itemCount {
+    font-size: 1.3rem;
+    align-items: center;
+    gap: 50px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.payment {
+   display: inline-flex;
+   align-items: center;
+   gap: 50px;
+   font-size: 1.3rem;
+   color: white;
+}
+
+.payment a {
+    padding: 10px 20px;
+    text-decoration: none !important;
+    color: white !important;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(13, 129, 211, 0.666),
+       5px 5px 15px rgba(7, 230, 197, 0.35);
+}

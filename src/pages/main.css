@@ -1,0 +1,58 @@
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    border: 1px solid rgb(0, 208, 255);
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(13, 129, 211, 0.666),
+       5px 5px 15px rgba(7, 230, 197, 0.35),
+       inset -5px -5px 15px rgba(4, 191, 197, 0.591),
+       inset 5px 5px 15px rgba(3, 233, 233, 0.35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    transition: 0.5s;   
+}
+.banner {
+    position: relative;
+    flex: 95;
+    width: 84%;
+    height: 100%;
+    border-radius: 30px;
+    border: 8px solid var(--bgColor);
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(13, 129, 211, 0.666),
+       5px 5px 15px rgba(7, 230, 197, 0.35);
+    transition: 1s;   
+}
+.banner.active {
+   position: relative;
+   width: 93%;
+   transition: 1s;
+}
+section {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 100vh;
+    padding: 0 30px 0 30px;
+    bottom: 0;
+    opacity: 0;
+    transition: ease-in-out 1s;
+    transform-origin: bottom;
+    z-index: 1000;
+}
+section::-webkit-scrollbar {
+    display: none;
+}
+section.active {
+    top: 100px;
+    height: auto;
+    overflow-y: visible;
+    opacity: 1;
+}
